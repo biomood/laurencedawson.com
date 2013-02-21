@@ -5,17 +5,14 @@
     <title>Laurence Dawson</title>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 	<style type="text/css" media="screen">
-	html {
-	font-size:100%;
-	-webkit-text-size-adjust:100%;
-	-ms-text-size-adjust:100%;
-	}
 
 	body {
 	font-family: 'Roboto', sans-serif;
 	font-style:normal;
 	margin:auto;
 	width:640px;
+	overflow-x:hidden;
+	padding:0;
 	}
 
 	h1{
@@ -36,8 +33,24 @@
 		color:#33B5E5;
 		text-decoration:none;
 	}
+	
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) {
+		body {
+		width:auto;
+		margin-left:20px;
+		margin-right:20px;
+		overflow-x:hidden;
+		}
+		
+		h1{
+			margin-top:20px;
+			margin-bottom:10px;
+		}
+	}
 	</style>
-  <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
   </head>
 
   <body>
@@ -45,6 +58,6 @@
 	  <p>I’m a third year Ph.D student at <a href="http://www.dur.ac.uk/ecs/">Durham University</a> exploring applications of parallel processing on the GPU. I’m also a mobile developer for <a href="http://net-a-porter.com">NET-A-PORTER</a> and have built some <a href="https://play.google.com/store/apps/developer?id=NET-A-PORTER.COM">amazing shopping apps</a> for Android.</p> 
 	  <p>I'm passionate about tech, long time Android enthusiast and love programming. In my spare time I develop for Android and am the author of the app <a href="https://play.google.com/store/apps/details?id=com.laurencedawson.reddit_sync">reddit sync</a>.</p>
 	  <p>I can be found on on <a href="https://github.com/laurencedawson">github</a> and <a href="http://stackoverflow.com/users/173892/laurence-dawson">stackoverflow</a>.</p>
-	  <p>Or email me at <a href="mailto:contact@laurencedawson.com">contact@laurencedawson.com</a>.
+	  <!--<p>Or email me at <a href="mailto:contact@laurencedawson.com">contact@laurencedawson.com</a>.-->
   </body> 
 </html>
