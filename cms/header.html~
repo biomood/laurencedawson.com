@@ -7,4 +7,5 @@
     <link type="text/css" rel="stylesheet" href="file:///home/dawson/Projects/laurencedawson.com/style.css" />
   </head>
   <body>
-  <h1><a href="posts.html">Laurence Dawson</a></h1>
+  <img class="circular" src="https://secure.gravatar.com/avatar/9a0552059d97d45fe9f36bd62e9818d4?s=128">
+  <h1><a href="/posts.html">Laurence Dawson</a></h1>

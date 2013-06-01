@@ -3,11 +3,12 @@ rm ../posts/*;
 
 # Create the post list page
 cat header.html > "../posts.html";
-echo "<h2>Archive</h2>" >> "../posts.html";
+echo "<p class=\"spacer\">I’m a third year Ph.D student at Durham University exploring applications of parallel processing on the GPU. I’m also a mobile developer for NET-A-PORTER and have built some amazing shopping apps for Android.</p>" >> "../posts.html";
+echo "<h2>Blog Posts</h2>" >> "../posts.html";
 echo "<ul>" >> "../posts.html";
 
 # Generate the new post list page
-for filename in ../markdown/*;
+for filename in `ls ../markdown/* | sort -r`;
   do     
 
     # Grab the basename and postname
