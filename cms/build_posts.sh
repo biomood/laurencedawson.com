@@ -2,10 +2,10 @@
 rm ../posts/*;
 
 # Create the post list page
-cat header.html > "../posts.html";
-echo "<p class=\"spacer\">I’m a third year Ph.D student at Durham University exploring applications of parallel processing on the GPU. I’m also a mobile developer for NET-A-PORTER and have built some amazing shopping apps for Android.</p>" >> "../posts.html";
-echo "<h2>Blog Posts</h2>" >> "../posts.html";
-echo "<ul>" >> "../posts.html";
+cat header.html > "../index.html";
+cat about.html >> "../index.html";
+echo "<h2>Blog Posts</h2>" >> "../index.html";
+echo "<ul>" >> "../index.html";
 
 # Generate the new post list page
 for filename in `ls ../markdown/* | sort -r`;
@@ -23,12 +23,12 @@ for filename in `ls ../markdown/* | sort -r`;
     cat footer.html >> "../posts/$postname.html";
 
     # Add the post to the post list page
-    echo "<li>$date » <a href=\"posts/$postname.html\">$title</a></li>" >> "../posts.html";
+    echo "<li>$date » <a href=\"posts/$postname.html\">$title</a></li>" >> "../index.html";
 
     # Print the filename to the terminal
     echo "Generated: $postname";
 done
 
 # Finish the post list page
-echo "</ul>" >> "../posts.html";
-cat footer.html >> "../posts.html";
+echo "</ul>" >> "../index.html";
+cat footer.html >> "../index.html";
