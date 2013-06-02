@@ -32,3 +32,11 @@ done
 # Finish the post list page
 echo "</ul>" >> "index.html";
 cat templates/footer.html >> "index.html";
+
+# Optimize the media folder
+echo "Compressing media";
+jpegoptim --strip-all -q -o media/*.jpg
+optipng -q media/*.png
+
+# Let the user know the process is complete
+echo "Site generated!";
